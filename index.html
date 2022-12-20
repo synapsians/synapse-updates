@@ -1,21 +1,28 @@
 <html>
 <head>
+  <title>Checkerboard</title>
   <style>
-    body {
-      background-color: #000000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    h1 {
-      color: white;
-      font-size: 36px;
+    div {
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <h1>coming out Wednesday, December 21</h1>
+  <div>Coming tomorrow December 21st</div>
+  <table>
+    <?php
+      for ($i = 0; $i < 8; $i++) {
+        echo "<tr>";
+        for ($j = 0; $j < 8; $j++) {
+          if (($i + $j) % 2 == 0) {
+            echo "<td bgcolor='#808080'></td>";
+          } else {
+            echo "<td bgcolor='#000000'></td>";
+          }
+        }
+        echo "</tr>";
+      }
+    ?>
+  </table>
 </body>
 </html>
